@@ -1,7 +1,7 @@
-import New from "./screens/New/New";
+import Navigation from "./screens/Navigation/Navigation";
 
 export default function App() {
   return (
-    <New/>
+    <Navigation />
   );
 }
