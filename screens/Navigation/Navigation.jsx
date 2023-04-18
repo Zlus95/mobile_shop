@@ -1,23 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { Text, View } from "react-native";
-import Home from "../Home/Home";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+import Home from "../Home/Home";
+import Categories from "../Categories/Categories";
+import Basket from "../Basket/Basket";
+import Account from "../Account/Account";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -41,7 +28,7 @@ export default function Navigation() {
         />
         <Tab.Screen
           name="Categories"
-          component={HomeScreen}
+          component={Categories}
           options={{
             tabBarLabel: "Categories",
             tabBarIcon: ({ color }) => (
@@ -55,7 +42,7 @@ export default function Navigation() {
         />
         <Tab.Screen
           name="Basket"
-          component={SettingsScreen}
+          component={Basket}
           options={{
             tabBarLabel: "Basket",
             tabBarIcon: ({ color }) => (
@@ -65,7 +52,7 @@ export default function Navigation() {
         />
         <Tab.Screen
           name="Account"
-          component={SettingsScreen}
+          component={Account}
           options={{
             tabBarLabel: "Account",
             tabBarIcon: ({ color }) => (

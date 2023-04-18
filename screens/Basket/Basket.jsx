@@ -1,11 +1,11 @@
 import { Text, View } from "react-native";
 import Layout from "../Layout/Layout";
 
-export default function Home() {
+export default function Basket() {
   return (
-    <Layout title="Home Page">
+    <Layout title="Basket Page">
       <View style={{ alignItems: "center" }}>
-        <Text>Content home page</Text>
+        <Text>Content Basket page</Text>
       </View>
     </Layout>
   );

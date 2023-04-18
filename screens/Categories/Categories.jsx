@@ -1,11 +1,11 @@
 import { Text, View } from "react-native";
 import Layout from "../Layout/Layout";
 
-export default function Home() {
+export default function Categories() {
   return (
-    <Layout title="Home Page">
+    <Layout title="Categories Page">
       <View style={{ alignItems: "center" }}>
-        <Text>Content home page</Text>
+        <Text>Content Categories page</Text>
       </View>
     </Layout>
   );

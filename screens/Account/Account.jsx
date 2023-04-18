@@ -1,11 +1,11 @@
 import { Text, View } from "react-native";
 import Layout from "../Layout/Layout";
 
-export default function Home() {
+export default function Account() {
   return (
-    <Layout title="Home Page">
+    <Layout title="Account Page">
       <View style={{ alignItems: "center" }}>
-        <Text>Content home page</Text>
+        <Text>Content Account page</Text>
       </View>
     </Layout>
   );

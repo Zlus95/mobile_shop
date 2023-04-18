@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
   },
   content: {
     flexGrow: 1,
-    // backgroundColor: "red",
     width: "100%",
+    justifyContent: "center",
   },
   navigatonBox: {
     flexShrink: 0,
