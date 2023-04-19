@@ -7,7 +7,9 @@ export const styles = StyleSheet.create({
     backgroundColor: "rgb(32, 137, 220)",
   },
   titleBox: {
-    marginTop: 30,
     marginLeft: 20,
+  },
+  title: {
+    fontSize: 20,
   },
 });

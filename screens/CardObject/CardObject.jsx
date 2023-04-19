@@ -3,7 +3,8 @@ import { View, Image, Text } from "react-native";
 import { styles } from "./styles";
 import { sliced } from "../utils/utils";
 
-export default function CardObject({ title, price, image }) {
+export default function CardObject({ title, price, image}) {
+
   return (
     <Card containerStyle={styles.containerStyle} wrapperStyle={{}}>
       <View style={styles.boxImage}>

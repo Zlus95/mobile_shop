@@ -6,7 +6,7 @@ export default function Layout({ children, title }) {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <View style={styles.titleBox}>
-          <Text>{title}</Text>
+          <Text style={styles.title}>{title}</Text>
         </View>
         <View>{children}</View>
       </ScrollView>
