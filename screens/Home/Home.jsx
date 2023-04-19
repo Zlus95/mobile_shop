@@ -16,9 +16,13 @@ export default function Home() {
   return (
     <Layout title="Home Page">
       <View style={styles.container}>
-        {products.map((el) => (
-          <View key={el.id} style={styles.card}>
-            <CardObject title={el.title} price={el.price} image={el.image} />
+        {products.map((element) => (
+          <View key={element.id} style={styles.card}>
+            <CardObject
+              title={element.title}
+              price={element.price}
+              image={element.image}
+            />
           </View>
         ))}
       </View>

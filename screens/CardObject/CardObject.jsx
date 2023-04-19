@@ -6,10 +6,6 @@ import { sliced } from "../utils/utils";
 export default function CardObject({ title, price, image }) {
   return (
     <Card containerStyle={styles.containerStyle} wrapperStyle={{}}>
-      <Card.Title style={styles.cardTitle}>
-        <Text>{sliced(title)}</Text>
-      </Card.Title>
-      <Card.Divider />
       <View style={styles.boxImage}>
         <Image
           style={styles.img}
@@ -18,8 +14,12 @@ export default function CardObject({ title, price, image }) {
             uri: image,
           }}
         />
-        <Text>{`${price} $`}</Text>
       </View>
+      <Card.Divider />
+      <Card.Title style={styles.cardTitle}>
+        <Text>{sliced(title)}</Text>
+      </Card.Title>
+      <Text style={styles.textPrice}>{`${price} $`}</Text>
     </Card>
   );
 }
