@@ -8,6 +8,8 @@ import Account from "../Account/Account";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import FullCard from "../Fullcard/FullCard";
 import { firstLetterToUppercase } from "../utils/utils";
+import CardObject from "../CardObject/CardObject";
+import CurrentCategory from "../Categories/CurrentCategory";
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -81,6 +83,22 @@ export default function Navigation() {
           component={FullCard}
           options={({ route }) => ({
             title: firstLetterToUppercase(route.params.category),
+            headerStyle: { backgroundColor: "#1E90FF" },
+          })}
+        />
+        {/* <Stack.Screen
+          name="CardObject"
+          component={CardObject}
+          // options={({ route }) => ({
+          //   title: firstLetterToUppercase(route.params.category),
+          //   headerStyle: { backgroundColor: "#1E90FF" },
+          // })}
+        /> */}
+        <Stack.Screen
+          name="CurrentCategory"
+          component={CurrentCategory}
+          options={({ route }) => ({
+            title: firstLetterToUppercase(route.params.currentCategory),
             headerStyle: { backgroundColor: "#1E90FF" },
           })}
         />

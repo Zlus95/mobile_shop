@@ -26,6 +26,8 @@ export default function Home({ navigation }) {
                   image: element.image,
                   category: element.category,
                   description: element.description,
+                  rate: element.rating.rate,
+                  count: element.rating.count,
                 })
               }
             >

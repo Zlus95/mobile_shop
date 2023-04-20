@@ -12,12 +12,16 @@ export const styles = StyleSheet.create({
     height: 370,
     marginTop: 20,
   },
-  textPrice: {
-    marginTop: 10,
-    fontSize: 30,
+  text: {
+    fontSize: 25,
   },
   textDescription: {
     fontSize: 20,
+    padding: 10,
+  },
+  boxPrice: {
+    flexDirection: "row",
+    justifyContent: "space-around",
     padding: 10,
   },
 });
