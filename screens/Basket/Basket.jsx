@@ -3,13 +3,12 @@ import Layout from "../Layout/Layout";
 import { useModalContext } from "../../Context/ContextProvider";
 import CardObject from "../CardObject/CardObject";
 
-export default function Basket({ route, navigation }) {
+export default function Basket({ navigation }) {
   const { basket } = useModalContext();
 
   return (
     <Layout title="Basket">
       <View style={{ alignItems: "center" }}>
-        {/* <View> */}
         {basket.length ? (
           basket.map((element, index) => (
             <TouchableOpacity
@@ -37,15 +36,12 @@ export default function Basket({ route, navigation }) {
         ) : (
           <View
             style={{
-              backgroundColor: "red",
-              flex: 1,
-              alignItems: "center",
-              justifyContent: "center",
-              // alignItems: "center",
-              // justifyContent: "flex-end",
+              marginTop: 50,
             }}
           >
-            <Text style={{ textAlign: "center" }}>nfd</Text>
+            <Text style={{ textAlign: "center", fontSize: 40 }}>
+              Basket is empty
+            </Text>
           </View>
         )}
       </View>

@@ -8,4 +8,15 @@ export const styles = StyleSheet.create({
   card: {
     width: 200,
   },
+  loader: {
+    flex: 1,
+    justifyContent: "center",
+    marginTop: 50,
+  },
+  errorText: {
+    flex: 1,
+    textAlign: "center",
+    fontSize: 30,
+    marginTop: 50,
+  },
 });
