@@ -14,7 +14,7 @@ export default function Home({ navigation }) {
   }, []);
 
   return (
-    <Layout title="Home Page">
+    <Layout title="Home">
       <View style={styles.container}>
         {products.map((element) => (
           <View key={element.id} style={styles.card}>

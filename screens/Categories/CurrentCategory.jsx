@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import CardObject from "../CardObject/CardObject";
 import Layout from "../Layout/Layout";
 import { styles } from "./styles";
+import { firstLetterToUppercase } from "../utils/utils";
 
 export default function CurrentCategory({ route, navigation }) {
   const { currentCategory } = route.params;
@@ -15,7 +16,7 @@ export default function CurrentCategory({ route, navigation }) {
   }, []);
 
   return (
-    <Layout>
+    <Layout title={firstLetterToUppercase(currentCategory)}>
       <View style={styles.boxCurrentCategory}>
         {category.map((element) => (
           <TouchableOpacity

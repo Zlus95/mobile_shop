@@ -14,22 +14,7 @@ export default function Categories({ navigation }) {
   }, []);
 
   return (
-    <Layout title="Categories Page">
-      {/* {categories.map((category, index) => (
-        <TouchableOpacity
-          key={index}
-          style={styles.categoryButton}
-          onPress={() =>
-            navigation.navigate("CurrentCategory", {
-              currentCategory: category,
-            })
-          }
-        >
-          <Text style={styles.categoryTitle}>
-            {firstLetterToUppercase(category)}
-          </Text>
-        </TouchableOpacity>
-      ))} */}
+    <Layout title="Categories">
       {categories.map((category, index) => (
         <Button
           key={index}

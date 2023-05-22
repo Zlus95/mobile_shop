@@ -14,6 +14,8 @@ export const styles = StyleSheet.create({
   },
   text: {
     fontSize: 25,
+    verticalAlign: "middle",
+    marginRight: 10,
   },
   textDescription: {
     fontSize: 20,
@@ -21,7 +23,6 @@ export const styles = StyleSheet.create({
   },
   boxPrice: {
     flexDirection: "row",
-    justifyContent: "space-around",
     padding: 10,
   },
 });
