@@ -3,10 +3,12 @@ import Layout from "../Layout/Layout";
 import React, { useEffect, useState } from "react";
 import CardObject from "../CardObject/CardObject";
 import { styles } from "./styles";
+import { Input } from "@rneui/themed";
 
 export default function Home({ navigation }) {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [search, setSearh] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
@@ -16,14 +18,29 @@ export default function Home({ navigation }) {
       .finally(() => setIsLoading(false));
   }, []);
 
+  const filterProducts = () => {
+    return products.filter((product) =>
+      product.title.toLowerCase().includes(search.toLowerCase())
+    );
+  };
+
   return (
     <Layout title="Home">
       {isLoading ? (
         <ActivityIndicator size="large" color="#ca71eb" style={styles.loader} />
       ) : (
         <View style={styles.container}>
-          {products ? (
-            products.map((element) => (
+          <Input
+            placeholder="Search"
+            leftIcon={{
+              type: "font-awesome",
+              name: "search",
+            }}
+            onChangeText={setSearh}
+            value={search}
+          />
+          {filterProducts().length > 0 ? (
+            filterProducts().map((element) => (
               <View key={element.id} style={styles.card}>
                 <TouchableOpacity
                   onPress={() =>
@@ -47,9 +64,7 @@ export default function Home({ navigation }) {
               </View>
             ))
           ) : (
-            <Text style={styles.errorText}>
-              Server error. Please try again later.
-            </Text>
+            <Text style={styles.errorText}>Not Found</Text>
           )}
         </View>
       )}

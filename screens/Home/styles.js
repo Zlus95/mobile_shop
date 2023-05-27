@@ -14,9 +14,8 @@ export const styles = StyleSheet.create({
     marginTop: 50,
   },
   errorText: {
-    flex: 1,
     textAlign: "center",
     fontSize: 30,
-    marginTop: 50,
+    margin: "30%",
   },
 });
