@@ -2,18 +2,19 @@ import { TouchableOpacity, View, Text } from "react-native";
 import Layout from "../Layout/Layout";
 import { useModalContext } from "../../Context/ContextProvider";
 import CardObject from "../CardObject/CardObject";
+import { styles } from "./styles";
 
 export default function Basket({ navigation }) {
   const { basket } = useModalContext();
 
   return (
     <Layout title="Basket">
-      <View style={{ alignItems: "center" }}>
+      <View style={styles.container}>
         {basket.length ? (
           basket.map((element, index) => (
             <TouchableOpacity
               key={index}
-              style={{ width: 250 }}
+              style={styles.styleButton}
               onPress={() =>
                 navigation.navigate("FullCard", {
                   title: element.title,
@@ -34,15 +35,7 @@ export default function Basket({ navigation }) {
             </TouchableOpacity>
           ))
         ) : (
-          <View
-            style={{
-              marginTop: 50,
-            }}
-          >
-            <Text style={{ textAlign: "center", fontSize: 40 }}>
-              Basket is empty
-            </Text>
-          </View>
+          <Text style={styles.textError}>Basket is empty</Text>
         )}
       </View>
     </Layout>
