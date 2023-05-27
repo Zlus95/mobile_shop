@@ -1,7 +1,5 @@
 # mobile_shop
 
-A simple application for entering a short pin code.
-
 You can:
 1) View all available products
 2) View products by specific categories
