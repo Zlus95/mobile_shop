@@ -25,4 +25,15 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 10,
   },
+  buttonStyle: {
+    borderRadius: 20,
+    backgroundColor: "#ca71eb",
+  },
+  titleButtonStyle: {
+    fontSize: 15,
+  },
+  containeButtonrStyle: {
+    height: 40,
+    width: 100,
+  },
 });
